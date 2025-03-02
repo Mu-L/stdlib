@@ -153,7 +153,7 @@ main() {
 		# Multiple packages case:
 		comment="Hello! 👋
 
-Pro-tip: This PR changes multiple packages. You can use various \`make\` rules with \`*_FILTERS\` environment variables to run tests, benchmarks, and examples for specific packages.
+Pro-tip: This PR changes multiple packages. You can use various \`make\` rules with \`*_FILTER\` environment variables to run tests, benchmarks, and examples for specific packages.
 
 For each of the commands, please run them from the root stdlib repository directory (not the package folder!).
 
@@ -164,7 +164,7 @@ You can use pattern matching to target specific packages as follows:
 make test TESTS_FILTER=\".*/@stdlib/math/.*\"
 
 # Run benchmarks for specific packages (using OR pattern):
-make benchmark BENCHMARKS_FILTER=\".*/@stdlib/math/base/special/sin/.*|.*/@stdlib/math/base/special/cos/.*\"
+make benchmark BENCHMARKS_FILTER=\".*/@stdlib/math/base/special/(sin|cos)/.*\"
 \`\`\`
 
 ## Changed Packages
