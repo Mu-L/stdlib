@@ -59,7 +59,7 @@ repo_owner="stdlib-js"
 repo_name="stdlib"
 
 # Regular expressions for auto-closing language:
-closing_keywords="(resolves|closes|fixes|resolved|closed|fixed)"
+closing_keywords="(close|closes|closed|fix|fixes|fixed|resolve|resolves|resolved)"
 
 # Unique identifier for our bot comments:
 comment_identifier="<!-- stdlib-bot-tracking-issue-closure-check -->"
@@ -188,12 +188,14 @@ post_comment() {
 I noticed your PR description contains closing keywords (\"Resolves\", \"Closes\", or \"Fixes\") referencing a \"Tracking Issue\".
 
 **Why this matters:**
-Tracking issues should typically remain open until all related sub-issues are completed. GitHub automatically closes issues with such closing keywords when the PR is merged.
+Tracking issues should typically remain open until all related sub-issues are completed. GitHub automatically closes issues with such closing keywords when the PR is merged. For more information, see [GitHub's documentation on using keywords in issues and pull requests][github-keywords].
 
 **Required action:**
 Use \"Progresses\" instead to reference the tracking issue without automatically closing it.
 
-Thank you for your contribution to the project!"
+Thank you for your contribution to the project!
+
+[github-keywords]: https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/using-keywords-in-issues-and-pull-requests"
 
 	# Create properly escaped JSON payload using jq
 	json_payload=$(jq -n --arg body "$comment_body" '{"body": $body}')
