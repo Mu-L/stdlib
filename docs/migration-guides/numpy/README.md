@@ -39,7 +39,7 @@ limitations under the License.
 | Test whether an array includes a specific value | `np.any(np.equal(x,v))` | [`includes(x,v)`][@stdlib/ndarray/includes] |
 | Reverse the elements along a dimension | `np.flip(x, axis=dim)` | [`reverseDimension(x, dim)`][@stdlib/ndarray/reverse-dimension] |
 | Prepend a a specified number of singleton dimensions | `np.reshape(x, (1,)*n + x.shape)` | [`prependSingletonDimensions(x, n)`][@stdlib/ndarray/prepend-singleton-dimensions] |
-| Test whether an array includes at least `n` elements having a specific value | `np.count_nonzero(x) >= n` | [`some(x, n)`][@stdlib/ndarray/some] |
+| Test whether an array contains at least `n` truthy values | `np.count_nonzero(x) >= n` | [`some(x, n)`][@stdlib/ndarray/some] |
 
 <!-- lint enable table-pipe-alignment -->
 
